@@ -35,12 +35,30 @@
 // object validation
 
 
-function getPrice(product) {
-    if(typeof product !== 'object') {
-        return 'Please provide an object';
+// function getPrice(product) {
+//     if(typeof product !== 'object') {
+//         return 'Please provide an object';
+//     }
+//     const price = product.price;
+//     return price;
+// }
+// const result = getPrice({name: 'shirt', price: 500,});
+// console.log(result);
+
+
+
+
+// array validation : array is one type of object
+
+
+function getSecond(numbers) {
+    if(Array.isArray(numbers) === false) {
+        return 'Please provide an array'
     }
-    const price = product.price;
-    return price;
+    const second = numbers[1];  //index one 
+    return second;
 }
-const result = getPrice({name: 'shirt', price: 500,});
+// let result = getSecond(22);
+let numbers = [12, 33, 43, 45, 65, 76,90]
+let result = getSecond(numbers);
 console.log(result);
