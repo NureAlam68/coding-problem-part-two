@@ -1,11 +1,30 @@
 // number validation 
 
-function multiply(n1, n2) {
-    if(typeof n1 !== 'number' || typeof n2 !== 'number') {
-        return 'please provide a number';
+// function multiply(n1, n2) {
+//     if(typeof n1 !== 'number' || typeof n2 !== 'number') {
+//         return 'please provide a number';
+//     }
+//     const mult = n1 * n2;
+//     return mult;
+// }
+// let result = multiply(9, 'two');
+// console.log(result);
+
+
+
+
+// string validation
+
+
+function fullName(first, second) {
+    if(typeof first !== 'string') {
+        return 'First name should be a string.';
     }
-    const mult = n1 * n2;
-    return mult;
+    else if(typeof second !== 'string') {
+        return 'Second name should be a string.'
+    }
+    const full = first + ' ' + second;
+    return full;
 }
-let result = multiply(9, 'two');
+const result = fullName('Nure', 'Alam');
 console.log(result);
