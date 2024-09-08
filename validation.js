@@ -16,15 +16,31 @@
 // string validation
 
 
-function fullName(first, second) {
-    if(typeof first !== 'string') {
-        return 'First name should be a string.';
+// function fullName(first, second) {
+//     if(typeof first !== 'string') {
+//         return 'First name should be a string.';
+//     }
+//     else if(typeof second !== 'string') {
+//         return 'Second name should be a string.'
+//     }
+//     const full = first + ' ' + second;
+//     return full;
+// }
+// const result = fullName('Nure', 'Alam');
+// console.log(result);
+
+
+
+
+// object validation
+
+
+function getPrice(product) {
+    if(typeof product !== 'object') {
+        return 'Please provide an object';
     }
-    else if(typeof second !== 'string') {
-        return 'Second name should be a string.'
-    }
-    const full = first + ' ' + second;
-    return full;
+    const price = product.price;
+    return price;
 }
-const result = fullName('Nure', 'Alam');
+const result = getPrice({name: 'shirt', price: 500,});
 console.log(result);
